@@ -1,125 +1,189 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>My Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <style>
+
         body {
+            font-family: 'Arial', sans-serif;
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
         }
+
         header {
             background-color: #333;
             color: #fff;
-            padding: 20px;
-            text-align: center;
+            padding: 1em;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        header h1 {
-            margin: 0;
-            padding-right: 20px;
-        }
+
         nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+            list-style: none;
             display: flex;
         }
+
         nav ul li {
             margin-right: 20px;
         }
-        nav ul li:last-child {
-            margin-right: 0;
-        }
-        nav ul li a {
-            color: #fff;
+
+        nav a {
             text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #ffc107; /* Change to your desired hover color */
-        }
-        .social-links {
-            display: flex;
-            align-items: center;
-        }
-        .social-links a {
-            margin-right: 10px;
             color: #fff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #0077cc;
+            color: #fff;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #0077cc;
             text-decoration: none;
-            transition: color 0.3s ease;
-            font-size: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
         }
-        .social-links a:hover {
-            color: #ffc107; /* Change to your desired hover color */
+
+        .about {
+            text-align: center;
+            padding: 80px 20px;
         }
-        section {
+
+        .about img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .skills {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .skills-chart {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
             padding: 20px;
-            background-color: #f9f9f9;
-            margin-bottom: 20px;
+            text-align: center;
         }
+
+        /* Add more styles as needed */
     </style>
 </head>
+
 <body>
     <header>
-        <div>
-            <h1>Yukti Verma</h1>
-            <nav>
-                <ul>
-                    <li><a href="#who-am-i">Who am I</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#certs">Certs</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Education</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><img src="D:\Downloads\thm.png" alt="TryHackMe" style="width: 25px; height: auto;"></a> <!-- Image representation -->
-        </div>
-        <div class="resume-link">
-            <a href="#">Download Resume</a>
-        </div>
+        <div class="logo">Your Logo</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <!-- Sections -->
-    <section id="who-am-i">
-        <h2>Who am I</h2>
-        <!-- Your content for "Who am I" section goes here -->
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Yukti Verma</h1>
+        <p>Securing the Digital Frontier with Wit and Expertise</p>
+        <a href="#contact" class="cta-button">Get in Touch</a>
     </section>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <!-- Your content for "Projects" section goes here -->
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <img src="your-photo.jpg" alt="Your Photo">
+        <p>abc</p>
     </section>
-    
-    <section id="experience">
-        <h2>Experience</h2>
-        <!-- Your content for "Experience" section goes here -->
-    </section>
-    
-    <section id="certs">
-        <h2>Certs</h2>
-        <!-- Your content for "Certs" section goes here -->
-    </section>
-    
-    <section id="skills">
+
+    <section id="skills" class="skills">
         <h2>Skills</h2>
-        <!-- Your content for "Skills" section goes here -->
+        <div class="skills-chart">
+            <canvas id="skillsChart"></canvas>
+        </div>
     </section>
     
-    <section id="education">
-        <h2>Education</h2>
-        <!-- Your content for "Education" section goes here -->
     </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+   
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <h2>Blog</h2>
+      
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Get in touch for collaboration or more information.</p>
+        
+    </section>
+
+    <script>
+        // Sample data for skills
+        var skillsData = {
+            labels: ["Skill 1", "Skill 2", "Skill 3", "Skill 4", "Skill 5"],
+            datasets: [{
+                label: "Proficiency Level",
+                borderColor: "#0077cc",
+                backgroundColor: "rgba(0, 119, 204, 0.2)",
+                data: [80, 90, 70, 85, 95],
+                fill: true,
+            }]
+        };
+
+        // Get the canvas element
+        var skillsCanvas = document.getElementById("skillsChart");
+
+        // Create the chart
+        var skillsChart = new Chart(skillsCanvas, {
+            type: 'line',
+            data: skillsData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2024 Yukti Verma's Portfolio. All rights reserved.</p>
+        </div>
+        <div class="social-media">
+            
+        </div>
+    </footer>
 </body>
+
 </html>
